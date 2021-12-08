@@ -1,0 +1,10 @@
+1: create database visitorsDB;
+2: grant all on visitorsDB.* to 'visitor' identified by 'visitorpasswd;
+3: quit;
+4: mysql -u visitor -p visitorsDB
+5: create table visit(
+	id int not null auto_increment primary key,
+	email varchar (64) not null,
+	message varchar (128) not null,
+	the_date date not null,
+	time_visited time (0) not null);

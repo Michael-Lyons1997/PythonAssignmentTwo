@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block body %}
+    Click <a href="/showpersonalpage">here</a> to access my personal page<br/><br/>
+    Click <a href="/showCVpage">here</a> to access my CV<br/><br/>
+    Click <a href="/showtechnologiespage">here</a> to access my interests in computing technologies page<br/><br/>
+    Click <a href="/showinterestspage">here</a> to access my non-computing interests<br/><br/>
+    Click <a href="/showvisitorspage">here</a> to see who's been leaving messages on my page<br/><br/>
+    Feel free to leave your email and a kind message here: <br/>
+    <form action="/processform" method="post">
+        email: <input type="text" name="email"><br/>
+        message: <input type="text" name="message"><br/>
+        <input type="submit" value="submit">
+    </form>
+{% endblock %}
