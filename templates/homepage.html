@@ -6,10 +6,10 @@
     Click <a href="/showtechnologiespage">here</a> to access my interests in computing technologies page<br/><br/>
     Click <a href="/showinterestspage">here</a> to access my non-computing interests<br/><br/>
     Click <a href="/showvisitorspage">here</a> to see who's been leaving messages on my page<br/><br/>
-    Feel free to leave your email and a kind message here: <br/>
+    Feel free to leave your email and a kind message here (128 characters or less): <br/>
     <form action="/processform" method="post">
         email: <input type="text" name="email"><br/>
-        message: <input type="text" name="message"><br/>
+        message: <input type="text" name="message" maxlength="128"><br/>
         <input type="submit" value="submit">
     </form>
 {% endblock %}

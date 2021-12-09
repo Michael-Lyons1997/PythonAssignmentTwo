@@ -81,20 +81,15 @@ def displayvisitors():
             select email, message, 
             the_date, time_visited 
             from visit order by 
-            the_date asc, time_visited asc
+            the_date desc, time_visited desc
         """
         db.execute(SQL)
         data = db.fetchall()
-        for row in data:
-            theemail = row[0]
-            themessage = row[1]
-            thedate  = row[2]
-            thetime  = row[3]
     return render_template(
         "visitorsPage.html",
         title="Visitors",
         heading="These are the most recent visitors",
-        who=theemail, what=themessage, date=thedate, time=thetime,
+        theData = data,
     )
 
 

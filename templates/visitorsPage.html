@@ -2,33 +2,42 @@
 
 {% block body %}
 <table>
+    {%for data in theData%}
     <tr>
         <td>Your email: 
         </td>
         <td>
-            {{ who }}
+            {{ data[0] }}
         </td>
     </tr>
     <tr>
         <td>Your message:
         </td>
         <td>
-            {{ what }}
+            {{ data[1] }}
         </td>
     </tr>
     <tr>
         <td>Date:
         </td>
         <td>
-            {{ date }}
+            {{ data[2] }}
         </td>
     </tr>
     <tr>
         <td>Time:
         </td>
         <td>
-            {{ time }}
+            {{ data[3] }}
         </td>
     </tr>
+    <tr>
+        <td>&nbsp;
+        </td>
+        <td>
+            &nbsp;
+        </td>
+    </tr>
+    {%endfor%}
 </table>
 {% endblock %}

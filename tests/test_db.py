@@ -18,10 +18,10 @@ def test_count_increase(client, clean_up_db):
     initial_count = results[0][0]  # We get back a list of tuples.
 
     form_data = {
-        "year": "99",
-        "student": "test99",
-        "login": "C99999999",
-        "addr": "99:99:99:99:99:99",
+        "email": "test@test.ie",
+        "message": "this is a test",
+        "the_date": "1997/12/12",
+        "time_visited": "00:00:00",
     }
     # Send the data to webapp using the FORM's URL.
     client.post("/savedata", data=form_data)
@@ -39,10 +39,10 @@ def test_count_increase(client, clean_up_db):
 def test_last_row(client,clean_up_db):
     """ Is the last row of data equal to what was submitted via the form? """
     form_data = {
-        "year": "88",
-        "student": "test88",
-        "login": "C8888888888",
-        "addr": "88:88:88:88:88:88",
+        "email": "test@test.ie",
+        "message": "this is a test",
+        "the_date": "1997/12/12",
+        "time_visited": "00:00:00",
     }
     # Send the data to webapp using the FORM's URL.
     client.post("/savedata", data=form_data)
