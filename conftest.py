@@ -17,6 +17,6 @@ def app():
 def clean_up_db():
     yield
     with DBcm.UseDatabase(config) as db:
-        SQL = """ delete from addrs where student = test
+        SQL = """ delete from visit where email = test@test.ie
             """
-    db.execute(SQL)
+        db.execute(SQL)

@@ -36,7 +36,7 @@ def test_count_increase(client, clean_up_db):
     assert new_count == initial_count + 1
 
 
-def test_last_row(client,clean_up_db):
+def test_last_row(client, clean_up_db):
     """ Is the last row of data equal to what was submitted via the form? """
     form_data = {
         "email": "test@test.ie",

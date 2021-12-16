@@ -5,17 +5,24 @@ def test_homepage(client):
     """ Test to see of the server is up. """
     assert client.get("/").status_code == 200
 
+
 def test_personal_page(client):
     """ Test to see of the server is up. """
     assert client.get("/showpersonalpage").status_code == 200
+
 
 def test_CV_page(client):
     """ Test to see of the server is up. """
     assert client.get("/showCVpage").status_code == 200
 
+
 def test_tech_page(client):
     """ Test to see of the server is up. """
     assert client.get("/showtechnologiespage").status_code == 200
+    assert client.get("showTechSubpage1").status_code == 200
+    assert client.get("showTechSubpage2").status_code == 200
+    assert client.get("showTechSubpage3").status_code == 200
+
 
 def test_interests_page(client):
     """ Test to see of the server is up. """
@@ -54,5 +61,7 @@ def test_form_operation(client, clean_up_db):
     assert response.status_code == 200
     resp = response.data  # The binary text version of the HTML response.
     assert resp.startswith(bytes("<!DOCTYPE html>", encoding="utf-8"))
+    assert bytes(form_data["email"], encoding="utf-8") in resp
+    assert bytes(form_data["message"], encoding="utf-8") in resp
     assert bytes(form_data["the_date"], encoding="utf-8") in resp
     assert bytes(form_data["time_visited"], encoding="utf-8") in resp

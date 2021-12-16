@@ -43,8 +43,8 @@ def displayTechnologies():
 def displaySub1():
     return render_template(
         "computingTechnologiesSubpageOne.html",
-        title="CV Page",
-        heading="This is my CV",
+        title="Virtual Reality",
+        heading="This is about Virtual Reality",
     )
 
 
@@ -52,8 +52,8 @@ def displaySub1():
 def displaySub2():
     return render_template(
         "computingTechnologiesSubpageTwo.html",
-        title="CV Page",
-        heading="This is my CV",
+        title="Quantum Computing",
+        heading="This about Quantum Computing",
     )
 
 
@@ -61,8 +61,8 @@ def displaySub2():
 def displaySub3():
     return render_template(
         "computingTechnologiesSubpageThree.html",
-        title="CV Page",
-        heading="This is my CV",
+        title="Internet of Things",
+        heading="This is about the IoT",
     )
 
 
@@ -73,6 +73,7 @@ def displayinterests():
         title="Interests",
         heading="These are my non-computing related interests",
     )
+
 
 @app.route("/showvisitorspage")
 def displayvisitors():
@@ -89,7 +90,7 @@ def displayvisitors():
         "visitorsPage.html",
         title="Visitors",
         heading="These are the most recent visitors",
-        theData = data,
+        theData=data,
     )
 
 
